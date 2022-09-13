@@ -1,0 +1,44 @@
+var_file=$1 		#stores the filename
+var_directory=$2 	#stores the directory name
+
+#defining emojis for creativity
+skull='\U1F480\n'
+folded_hands='\U1F64F\n'
+smiley='\U1F642\n'
+handshake='\U1F91D\n'
+
+echo "*****************************************************************"
+#checking the condition that the number of entries is exactly 2
+if [ $# -ne 2 ] 
+    then 
+        printf "Please enter appropriate number of arguments ${folded_hands}" 
+        echo "*****************************************************************"
+        exit 1
+fi
+#checking that if the file exists or not
+if test -f "$1"; 
+    then 
+        printf "Given file exists ${smiley}"
+else 
+    printf "Please enter a valid file name. $var_file is not a file ${skull}" 
+    echo "*****************************************************************"
+    exit 1
+fi
+#checking that if the directory exists or not
+if test -d "$2"; 
+    then 
+        printf "Given directory exists ${smiley}"
+else 
+    printf "Please enter a valid directory. $var_directory is not a directory ${skull}."
+    echo "*****************************************************************"
+    exit 1
+fi
+#while loop for backing up the files
+while read -r file_to_be_backed; 
+do
+    touch "$file_to_be_backed".bak
+    cp "$file_to_be_backed" "$file_to_be_backed".bak
+    mv "$file_to_be_backed".bak "$var_directory"
+    printf "Backup of $file_to_be_backed has been done successfully ${handshake}"
+done < $var_file
+echo "*****************************************************************"
