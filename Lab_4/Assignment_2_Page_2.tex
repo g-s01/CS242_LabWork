@@ -1,0 +1,97 @@
+% declaring the document type 
+\documentclass{article}
+% declaring the encoding
+\usepackage[utf8]{inputenc}
+% for enhancing the math formulas
+\usepackage{amsmath}
+
+\title{Hello World!}
+\author{Gautam Sharma}
+\date{January 1, 1831}
+% for suppressing the page number
+\pagenumbering{gobble}
+\begin{document}
+% using gather* so that the limit V comes in the middle of the triple integral
+\begin{gather*}
+    \iiint \limits_V f(x, y, z)dV = F
+\end{gather*}
+% using align* to align each equation in the middle of the document
+% formula for derivative of x wrt y using first principles
+\begin{align*}
+    & \frac{dx}{dy} = x^{'} = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}\\
+\end{align*}
+% formula for mod(x) = |x|
+\[
+|x| = 
+     \begin{cases}
+       \text{-x,} &\quad\text{if x}<0\\
+       \text{x,} &\quad\text{if x}\ge0 \\
+     \end{cases}
+\]
+% writing the equation which is basically the expansion of F(x) in terms of sin(), cos()
+\begin{align*}
+F(x) = A_0 +  \sum_{n=1}^{N} \left[  A_n\cos\left({\frac{2\pi nx}{P}}\right) +B_n\sin\left({\frac{2\pi nx}{P}}\right) \right] 
+\end{align*}
+% writing the equation of summation of n^-s 
+\begin{align*}
+     \sum_{n} \frac{1}{n^s} = \prod_{p} \frac{1}{1-\frac{1}{p^s}}
+\end{align*}
+% equation for shm: ma + cv + kx = F_0sin(2*pi*ft), a = double derivative of x wrt time (x double dot), v = derivative of x wrt time (x dot)
+\begin{align*}
+     m\ddot{x}+c\dot{x}+kx = F_0\sin{(2\pi ft)}
+\end{align*}
+% solving the polynomial f(x) = 6x^2 + 9x + 8
+\begin{align*}
+f(x) &= x^2 + 3x + 5x^2 + 8 + 6x\\
+     &= 6x^2 + 9x + 8\\
+     &= x(6x+9) + 8
+\end{align*}
+% writing the equation X = (F_0/k)(...), where ... represents some terms that can be referred from the question
+\begin{align*}
+X = {\frac{F_0}{k}}{\frac{1}{\sqrt{(1-r^2)^2 + (2\zeta r)^2}}}
+\end{align*}
+% writing the equation involving G_uv, R_uv, Rg_uv and T_uv
+\begin{align*}
+G_{\mu\nu} \equiv R_{\mu\nu} - {\frac{1}{2}}{R}{g_{\mu\nu}} = {\frac{8\pi G}{c^4}}{T_{\mu\nu}}\\
+\end{align*}
+% writing chemical equation involving CO_2, H_2O, O_2, C_6H_12O_6
+\begin{align*}
+\mathrm{6CO_2 + 6H_2O \rightarrow C_6H_{12}O_6 + 6O_2}
+\end{align*}
+% writing chemical equation involving SO_4^2-, Ba^2+, BaSO_4
+\begin{align*}
+\mathrm{{SO_4}^{2-} + {Ba}^{2+} \rightarrow BaSO_4}
+\end{align*}
+\begin{align*}
+ % writing the matrix [a_(ij)]
+ \begin{pmatrix}
+  a_{11} & a_{12} & \cdots & a_{1n}\\ 
+  a_{21} & a_{22} & \cdots & a_{2n}\\
+  \vdots & \vdots & \ddots & \vdots\\
+  a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{pmatrix}
+ % writing the matrix [v_1, v_2, ..., v_n]^T (where ^T represents taking the transpose)
+ \begin{pmatrix}
+  v_1\\ 
+  v_2\\
+  \vdots\\
+  v_n
+\end{pmatrix}
+=
+ % writing the matrix [w_1, w_2, ..., w_n]^T (where ^T represents taking the transpose)
+ \begin{pmatrix}
+  w_1\\ 
+  w_2\\
+  \vdots\\
+  w_n
+\end{pmatrix} 
+\end{align*}
+% writing the partial derivative equation given in the question 
+\begin{align*}
+		\frac{\partial \textbf{u}}{\partial t} + (\textbf{u}.\nabla)\textbf{u} - \nu{\nabla}^{\textbf{2}}(\textbf{u}) = -\nabla{\textbf{h}}
+\end{align*}
+% writing a bunch of symbols given in the question
+\begin{align*}
+{\alpha}{A}{\beta}{B}{\gamma}{\Gamma}{\delta}{\Delta}{\pi}{\Pi}{\omega}{\Omega}
+\end{align*}
+\end{document}
