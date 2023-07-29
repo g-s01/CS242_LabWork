@@ -60,3 +60,7 @@ where all entries are numbers in the range $[0, 8]$ where the number $0$ denotes
 
 Note: The program might take several seconds to compute. Kindly wait for at max $15$ minutes for the program to produce an output. <br>
 Note: While copying the arrays, `deepcopy` was used so that changes made in any array are independent of the other.
+
+### Credits
+
+This assignment was made by [Gautam Sharma](https://github.com/g-s01).
